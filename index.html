@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#254d4d',
+            light: '#f4f6f5',
+            textlight: '#737373'
+          },
+          fontFamily: {
+            header: ['Merriweather', 'serif'],
+            body: ['Poppins', 'sans-serif']
+          },
+          animation: {
+            'fade-in': 'fadeIn 0.5s ease-in',
+            'slide-up': 'slideUp 0.5s ease-out',
+            'float': 'float 3s ease-in-out infinite',
+          },
+          keyframes: {
+            fadeIn: {
+              '0%': { opacity: '0' },
+              '100%': { opacity: '1' },
+            },
+            slideUp: {
+              '0%': { transform: 'translateY(20px)', opacity: '0' },
+              '100%': { transform: 'translateY(0)', opacity: '1' },
+            },
+            float: {
+              '0%, 100%': { transform: 'translateY(0px)' },
+              '50%': { transform: 'translateY(-10px)' },
+            },
+          }
+        }
+      }
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <title>Elmohamady</title>
+</head>
+<body class="font-body scroll-smooth bg-gradient-to-br from-gray-50 via-white to-light/30">
+
+<nav class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md shadow-sm border-b border-gray-100">
+      <div class="max-w-7xl mx-auto flex items-center justify-center gap-5">
+    <div class="flex items-center justify-between p-4 md:py-6 md:px-8">
+      <a class="text-primary font-header text-2xl font-bold bg-gradient-to-r from-primary to-[#1a3a3a] bg-clip-text text-transparent hover:scale-105 transition-transform duration-300" href="#">Elmohamady</a>
+      <button id="menu-btn" class="md:hidden text-primary text-2xl hover:scale-110 transition-transform"><i class="ri-menu-line"></i></button>
+    </div>
+
+    <ul id="nav-links" class="hidden md:flex gap-8 items-center justify-center md:static absolute top-full left-0 w-full md:w-auto bg-white md:bg-transparent flex-col md:flex-row py-6 md:py-0 px-8 md:px-0 transition-all duration-500 -translate-y-full md:translate-y-0 shadow-lg md:shadow-none">
+      <li><a class="text-gray-700 hover:text-primary font-medium transition-all duration-300 hover:scale-105 relative group" href="#home">
+        Home
+        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>
+      </a></li>
+      <li><a class="text-gray-700 hover:text-primary font-medium transition-all duration-300 hover:scale-105 relative group" href="about.html">
+        About
+        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>
+      </a></li>
+      <li><a class="text-gray-700 hover:text-primary font-medium transition-all duration-300 hover:scale-105 relative group" href="#product">
+        Products
+        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>
+      </a></li>
+      <li><a class="text-gray-700 hover:text-primary font-medium transition-all duration-300 hover:scale-105 relative group" href="#contact">
+        Contact
+        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>
+      </a></li>
+      <li class="relative group">
+        <a href="cart.html" class="text-gray-700 hover:text-primary transition-all duration-300 hover:scale-110"><i class="fa fa-shopping-cart text-xl"></i></a>
+        <span id="cart-count" class="absolute -top-2 -right-2 bg-gradient-to-r from-red-500 to-red-600 text-white text-xs font-bold px-2 py-0.5 rounded-full shadow-lg animate-pulse">0</span>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+
+<header id="home" class="max-w-7xl mx-auto grid relative overflow-hidden pt-32 md:pt-24 pb-20">
+  <div class="absolute inset-0 bg-gradient-to-r from-primary/10 via-transparent to-transparent"></div>
+  <img src="assets/user1.jpg" class="ml-auto max-w-3xl rounded-2xl shadow-2xl transform hover:scale-105 transition-transform duration-700" />
+  <div class="absolute inset-0 flex items-center">
+    <div class="bg-white/70 backdrop-blur-xl p-8 md:p-12 max-w-xl rounded-2xl shadow-2xl border border-white/20 animate-slide-up">
+      <h1 class="font-header text-5xl md:text-6xl text-primary mb-6 bg-gradient-to-r from-primary to-[#1a3a3a] bg-clip-text text-transparent leading-tight">Discover stylish electronics and smart solutions</h1>
+      <p class="text-textlight text-lg leading-relaxed">Experience elegance and innovation with electronics designed by professionals</p>
+      <button class="mt-8 bg-gradient-to-r from-primary to-[#1a3a3a] text-white px-8 py-4 rounded-full font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 hover:from-[#1a3a3a] hover:to-primary">
+        Shop Now
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- DEALS -->
+<section class="max-w-7xl mx-auto px-6 md:px-20 py-20">
+  <div class="lg:col-span-4 mb-12">
+    <h2 class="font-header text-4xl md:text-5xl text-primary mb-4 bg-gradient-to-r from-primary to-[#1a3a3a] bg-clip-text text-transparent">Hot deals for you</h2>
+    <p class="text-textlight text-lg">Online shopping for retail sales direct to consumers</p>
+  </div>
+  <div class="grid gap-8 md:grid-cols-3 lg:grid-cols-4">
+    <div class="deals-card group cursor-pointer bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transform transition-all duration-500 hover:scale-105 hover:-translate-y-2 border border-gray-100">
+      <div class="overflow-hidden rounded-xl mb-4">
+        <img src="assets/phone.jpg" alt="Phone Deal" class="w-full h-48 object-cover rounded-xl transform transition-transform duration-700 group-hover:scale-110">
+      </div>
+      <div class="flex items-center gap-3 mb-4">
+        <div class="bg-gradient-to-br from-primary/10 to-primary/5 p-3 rounded-xl group-hover:scale-110 transition-transform duration-300">
+          <span class="text-3xl text-primary"><i class="ri-cash-line"></i></span>
+        </div>
+        <h4 class="font-bold text-xl text-gray-900 group-hover:text-primary transition-colors duration-300">1.5% cashback</h4>
+      </div>
+      <p class="text-textlight">Earn cashback on every purchase</p>
+    </div>
+    <div class="deals-card group cursor-pointer bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transform transition-all duration-500 hover:scale-105 hover:-translate-y-2 border border-gray-100">
+      <div class="overflow-hidden rounded-xl mb-4">
+        <img src="assets/laptop.jpg" alt="Laptop Deal" class="w-full h-48 object-cover rounded-xl transform transition-transform duration-700 group-hover:scale-110">
+      </div>
+      <div class="flex items-center gap-3 mb-4">
+        <div class="bg-gradient-to-br from-primary/10 to-primary/5 p-3 rounded-xl group-hover:scale-110 transition-transform duration-300">
+          <span class="text-3xl text-primary"><i class="ri-calendar-schedule-line"></i></span>
+        </div>
+        <h4 class="font-bold text-xl text-gray-900 group-hover:text-primary transition-colors duration-300">30 day terms</h4>
+      </div>
+      <p class="text-textlight">Interest-free payments</p>
+    </div>
+    <div class="deals-card group cursor-pointer bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transform transition-all duration-500 hover:scale-105 hover:-translate-y-2 border border-gray-100">
+      <div class="overflow-hidden rounded-xl mb-4">
+        <img src="assets/laptop2.jpg" alt="Laptop Deal" class="w-full h-48 object-cover rounded-xl transform transition-transform duration-700 group-hover:scale-110">
+      </div>
+      <div class="flex items-center gap-3 mb-4">
+        <div class="bg-gradient-to-br from-primary/10 to-primary/5 p-3 rounded-xl group-hover:scale-110 transition-transform duration-300">
+          <span class="text-3xl text-primary"><i class="ri-money-rupee-circle-line"></i></span>
+        </div>
+        <h4 class="font-bold text-xl text-gray-900 group-hover:text-primary transition-colors duration-300">Save money</h4>
+      </div>
+      <p class="text-textlight">Best prices guaranteed</p>
+    </div>
+      <div class="deals-card group cursor-pointer bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transform transition-all duration-500 hover:scale-105 hover:-translate-y-2 border border-gray-100">
+      <div class="overflow-hidden rounded-xl mb-4">
+        <img src="assets/quality.avif" alt="Laptop Deal" class="w-full h-48 object-cover rounded-xl transform transition-transform duration-700 group-hover:scale-110">
+      </div>
+      <div class="flex items-center gap-3 mb-4">
+        <div class="bg-gradient-to-br from-primary/10 to-primary/5 p-3 rounded-xl group-hover:scale-110 transition-transform duration-300">
+<span class="text-3xl text-primary">
+  <i class="ri-award-line"></i>
+</span>
+        </div>
+        <h4 class="font-bold text-xl text-gray-900 group-hover:text-primary transition-colors duration-300">High Quality</h4>
+      </div>
+      <p class="text-textlight">High Qulaity Products</p>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section id="product" class="max-w-7xl mx-auto px-6 md:px-20 py-20 bg-gradient-to-b from-transparent to-light/20 rounded-3xl">
+  <div class="mb-12">
+    <h2 class="font-header text-4xl md:text-5xl text-primary mb-4 bg-gradient-to-r from-primary to-[#1a3a3a] bg-clip-text text-transparent">Products</h2>
+    <p class="text-textlight text-lg">Explore our wide range of premium electronics</p>
+  </div>
+  <div class="flex items-center gap-4 bg-white/80 backdrop-blur-sm p-4 rounded-2xl shadow-lg mb-12 flex-wrap md:flex-nowrap border border-gray-100">
+    <select id="categoryFilter" class="appearance-none bg-white border-2 border-gray-200 rounded-xl py-3 px-6 pr-10 text-sm font-medium text-gray-800 cursor-pointer transition-all duration-300 hover:border-primary hover:shadow-md focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 bg-[url('data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'%23666\' stroke-width=\'2\' stroke-linecap=\'round\' stroke-linejoin=\'round\'%3E%3Cpolyline points=\'6 9 12 15 18 9\'/%3E%3C/svg%3E')] bg-no-repeat bg-[right_16px_center] bg-[length:20px] w-full md:w-auto">
+      <option value="all">All Categories</option>
+      <option value="phones">Phones</option>
+      <option value="laptops">Laptops</option>
+      <option value="airbuds">Airbuds</option>
+    </select>
+    <select id="priceFilter" class="appearance-none bg-white border-2 border-gray-200 rounded-xl py-3 px-6 pr-10 text-sm font-medium text-gray-800 cursor-pointer transition-all duration-300 hover:border-primary hover:shadow-md focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 bg-[url('data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'%23666\' stroke-width=\'2\' stroke-linecap=\'round\' stroke-linejoin=\'round\'%3E%3Cpolyline points=\'6 9 12 15 18 9\'/%3E%3C/svg%3E')] bg-no-repeat bg-[right_16px_center] bg-[length:20px] w-full md:w-auto">
+      <option value="all">All Prices</option>
+      <option value="500">Under $500</option>
+      <option value="1000">Under $1000</option>
+      <option value="2000">Under $2000</option>
+    </select>
+  </div>
+  <div id="productGrid" class="grid gap-8 md:grid-cols-2 lg:grid-cols-3"></div>
+</section>
+
+<!-- CLIENTS -->
+<section class="max-w-7xl mx-auto px-6 md:px-20 py-20">
+  <div class="bg-gradient-to-br from-light via-white to-light/50 rounded-3xl p-12 md:p-16 shadow-2xl border border-white/50">
+    <div class="max-w-[550px] mx-auto text-center mb-12">
+      <h2 class="font-header text-4xl md:text-5xl text-primary mb-6 bg-gradient-to-r from-primary to-[#1a3a3a] bg-clip-text text-transparent">What Our Clients Say</h2>
+      <p class="text-textlight text-lg">Read testimonials from our satisfied customers</p>
+    </div>
+    
+    <div class="grid gap-8 max-w-[750px] mx-auto md:grid-cols-2 md:items-center">
+      <div class="client-card bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transform transition-all duration-300 hover:scale-105 border border-gray-100">
+        <div class="flex justify-center mb-6">
+          <img src="assets/user2.jpg" alt="Client" class="w-32 h-32 rounded-full object-cover shadow-xl border-4 border-white ring-4 ring-primary/10">
+        </div>
+        <p class="mb-6 text-lg text-textlight italic leading-relaxed">"Best electronics store I've ever shopped at. Great prices and fast delivery!"</p>
+        <h4 class="text-xl font-bold text-gray-900 mb-1">Jane Smith</h4>
+        <h5 class="text-sm font-medium text-textlight">Designer, Creative Studio</h5>
+      </div>
+      
+      <div class="client-card bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transform transition-all duration-300 hover:scale-105 border border-gray-100">
+        <div class="flex justify-center mb-6">
+          <img src="assets/user3.jpg" alt="Client" class="w-32 h-32 rounded-full object-cover shadow-xl border-4 border-white ring-4 ring-primary/10">
+        </div>
+        <p class="mb-6 text-lg text-textlight italic leading-relaxed">"Outstanding customer support and premium quality products. Will shop again!"</p>
+        <h4 class="text-xl font-bold text-gray-900 mb-1">Mike Johnson</h4>
+        <h5 class="text-sm font-medium text-textlight">Developer, Web Solutions</h5>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="contact" class="bg-gradient-to-br from-primary via-[#1a3a3a] to-primary text-white mt-20">
+  <div class="max-w-7xl mx-auto grid gap-12 p-12 md:p-20 md:grid-cols-4">
+    <div>
+      <h3 class="font-header text-2xl mb-4 bg-gradient-to-r from-white to-gray-200 bg-clip-text text-transparent">Elmohamady</h3>
+      <p class="opacity-90 mb-6 leading-relaxed">Transforming your digital lifestyle with cutting-edge electronics</p>
+      <div class="flex gap-4">
+        <a href="#" class="w-10 h-10 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 hover:rotate-12"><i class="ri-facebook-fill"></i></a>
+        <a href="#" class="w-10 h-10 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 hover:rotate-12"><i class="ri-twitter-fill"></i></a>
+        <a href="#" class="w-10 h-10 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 hover:rotate-12"><i class="ri-linkedin-fill"></i></a>
+        <a href="#" class="w-10 h-10 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 hover:rotate-12"><i class="ri-pinterest-fill"></i></a>
+      </div>
+    </div>
+    <div>
+      <h4 class="mb-6 text-lg font-semibold">Services</h4>
+      <ul class="space-y-3 opacity-90">
+        <li><a href="#" class="hover:opacity-100 hover:translate-x-1 transition-all duration-300 inline-block">Contact</a></li>
+        <li><a href="#" class="hover:opacity-100 hover:translate-x-1 transition-all duration-300 inline-block">Press</a></li>
+        <li><a href="#" class="hover:opacity-100 hover:translate-x-1 transition-all duration-300 inline-block">Blog</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="mb-6 text-lg font-semibold">Resources</h4>
+      <ul class="space-y-3 opacity-90">
+        <li><a href="#" class="hover:opacity-100 hover:translate-x-1 transition-all duration-300 inline-block">Pricing</a></li>
+        <li><a href="#" class="hover:opacity-100 hover:translate-x-1 transition-all duration-300 inline-block">FAQs</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="mb-6 text-lg font-semibold">Support</h4>
+      <ul class="space-y-3 opacity-90">
+        <li><a href="#" class="hover:opacity-100 hover:translate-x-1 transition-all duration-300 inline-block">Help</a></li>
+        <li><a href="#" class="hover:opacity-100 hover:translate-x-1 transition-all duration-300 inline-block">Security</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="border-t border-white/20 p-6 text-center text-sm opacity-80">
+    © 2024 Elmohamady. All rights reserved.
+  </div>
+</footer>
+
+<script src="main.js"></script>
+<script src="index.js"></script>
+</body>
+</html>
